@@ -13,6 +13,9 @@ public class main {
 
         System.out.println("Задание 3");
         changeArray ();
+
+        System.out.println("Задание 4");
+        fillDiagonal ();
     }
 
     public static void invertArray ()  {
@@ -37,7 +40,7 @@ public class main {
     }
 
     public static void changeArray () {
-        int [] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < 6);
             arr[i] = arr[i] * 2;
@@ -45,4 +48,21 @@ public class main {
 
         }
     }
+
+
+    public static void fillDiagonal () {
+        int[][] arr = new int [16][16];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++)
+                if (i == j || j == arr[i].length - i - 1) {
+                    arr[i][j] = 1;
+                    System.out.print(" " + arr[i][j]);
+
+                } else {
+                    System.out.print(" " + arr[i][j]);
+                }
+            System.out.println("");
+        }
+    }
 }
+
