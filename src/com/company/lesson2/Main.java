@@ -1,8 +1,7 @@
 package com.company.lesson2;
 
-import java.util.Arrays;
+public class Main {
 
-public class main {
     public static void main(String[] args) {
 
         System.out.println("Задание 1");
@@ -42,10 +41,11 @@ public class main {
     public static void changeArray () {
         int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < 6);
-            arr[i] = arr[i] * 2;
-            System.out.println(i + " " + arr[i]);
+            if (arr[i] < 6) {
+                arr[i] = arr[i] * 2;
+                System.out.println(i + " " + arr[i]);
 
+            }
         }
     }
 
@@ -60,10 +60,9 @@ public class main {
 
                 } else {
                     System.out.print(" " + arr[i][j]);
-                }
-            System.out.println("");
+
+                } System.out.println();
         }
     }
 }
 
-//
