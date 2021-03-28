@@ -16,13 +16,16 @@ public class Main {
         do {
             int tryCount = 0;
             int maxTryCount = 3;
-            int answer = random.nextInt(10);
+           int answer = random.nextInt(10);
+           int userAnswer;
 
-            System.out.print("Введите число  от 0 до 9");
 
             while (tryCount < maxTryCount ) {
                 tryCount++;
-                int userAnswer = scanner.nextInt();
+                do {
+                    System.out.println("Введите число в диапазоне от 0 до 9 \n");
+                    userAnswer = scanner.nextInt();
+                } while (0 > userAnswer||userAnswer > 9);
                 if (userAnswer == answer) {
                     System.out.println("Поздравляю вы угадали, правильный ответ " + answer + "!");
                 } else if (tryCount >= maxTryCount) {
@@ -34,7 +37,7 @@ public class Main {
                 }
             }       System.out.println("Повторить игру еще раз? Y/N" );
 
-       } while (scanner.next().equals("Y"));
+       } while (scanner.next().equalsIgnoreCase("y"));
 
         scanner.close();
     }
