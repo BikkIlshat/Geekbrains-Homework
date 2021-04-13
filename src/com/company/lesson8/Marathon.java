@@ -7,4 +7,5 @@ public interface Marathon extends Jump, Run {
 
     @Override
     void run();
+
 }
