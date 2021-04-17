@@ -1,18 +1,55 @@
 package com.company.lesson8;
 
 public class Robot implements Marathon {
+    private String name;
+    private int maxHeight;
+    private int maxLength;
+    private boolean success;
+
+    public Robot(String name, int maxHeight, int maxLength, boolean success) {
+        this.name = name;
+        this.maxHeight = maxHeight;
+        this.maxLength = maxLength;
+        this.success = success;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getMaxHeight() {
+        return maxHeight;
+    }
+
+    @Override
+    public String getNickName() {
+        return getName();
+    }
+
+    public int getMaxLength() {
+        return maxLength;
+    }
 
 
     @Override
     public void run() {
-        int maxRun = 100;
-        System.out.println("Робот пробежал ");
+        System.out.println("Робот " + name + " готовится на забег ");
     }
+
 
     @Override
     public void jump() {
-        int maxJump = 3;
-        System.out.println("Робот перепрыгнул ");
+
+        System.out.println("Робот " + name + " готовится к прыжку ");
     }
 
+    @Override
+    public boolean getSuccess() {
+        return success;
+    }
+
+    @Override
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
 }

@@ -1,12 +1,10 @@
 package com.company.lesson8;
 
-public interface Obstacles extends Treadmill, Wall  {
+public interface Obstacles  {
 
-    @Override
-    void runningOnTheTreadmill();
+void toRun(Marathon marathon);
 
-    @Override
-    void jumpOverTheWall();
+void toJump(Marathon marathon);
 
 
 }

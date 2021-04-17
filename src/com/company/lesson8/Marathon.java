@@ -1,11 +1,19 @@
 package com.company.lesson8;
 
-public interface Marathon extends Jump, Run {
+public interface Marathon  {
 
-    @Override
+    int getMaxLength();
+
+    int getMaxHeight();
+
+    String getNickName();
+
     void jump();
 
-    @Override
     void run();
+
+    boolean getSuccess();
+
+    void setSuccess(boolean success);
 
 }
